@@ -8,5 +8,18 @@
   background-color: cornflowerblue;
   margin: 0 auto;
   margin-top: 10%;
+  padding-top: 10px;
   border-radius: 2%;
+}
+
+.display {
+  width: 280px;
+  height: 25px;
+  margin-top: 20px;
+  background-color: aquamarine;
+  margin: 0 auto;
+}
+
+.keypad {
+  margin-top: 5px;
 }
