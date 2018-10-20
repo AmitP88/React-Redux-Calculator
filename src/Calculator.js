@@ -42,10 +42,31 @@ export default class Calculator extends Component {
                 case "*":
                 case "/":
                 case ".":
-                    this.setState({
-                        displayValues: [...this.state.displayValues, event.target.value]
-                    }, () => { console.log(this.state.displayValues); });
+                    switch(this.state.displayValues[this.state.displayValues.length - 1]) {
+                        case "+":
+                        case "-":
+                        case "*":
+                        case "/":
+                        case ".":
+                            console.log('duplicate operator!');
+                            break;
+                        default:
+                            this.setState({
+                                displayValues: [...this.state.displayValues, event.target.value]
+                            }, () => { console.log(this.state.displayValues); });
+                            break;                             
+                    }
                     break;
+                default:
+                    console.log('waiting to calculate..');
+                    break;
+
+
+
+
+
+
+
                 
             }
     }
