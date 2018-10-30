@@ -1,3 +1,5 @@
+/* eslint no-eval: 0 */
+
 import React, { Component } from 'react';
 
 export default class Calculator extends Component {
@@ -24,18 +26,18 @@ export default class Calculator extends Component {
                 case "9":
                     if(this.state.displayValues[0] === 0) {
                         this.setState({
-                            displayValues: [Number(event.target.value)]
-                        }, () => { console.log(this.state.displayValues); });
+                            displayValues: [event.target.value]
+                        }, () => console.log(this.state.displayValues));
                     } else {
                         this.setState({
-                            displayValues: [...this.state.displayValues, Number(event.target.value)]
-                        }, () => { console.log(this.state.displayValues); });                        
+                            displayValues: [...this.state.displayValues, event.target.value]
+                        }, () => console.log(this.state.displayValues));                        
                     }
                     break;
                 case "CE":
                     this.setState({
                         displayValues: [0]
-                    }, () => { console.log(this.state.displayValues); });
+                    }, () => console.log(this.state.displayValues));
                     break;
                 case ".":
                 case "+":
@@ -44,25 +46,9 @@ export default class Calculator extends Component {
                 case "/":
                     switch(this.state.displayValues[this.state.displayValues.length - 1]) {
                         case ".":
-
-
-
-
-                        
-                            if((this.state.displayValues[this.state.displayValues.length - 1] === '.')&&(typeof this.state.displayValues[this.state.displayValues.length - 2] === 'number')){
-                                console.log("too many decimals for this number!");
-                                return this.state.displayValues;
-                            } else {
                                 this.setState({
                                     displayValues: [...this.state.displayValues, event.target.value]
-                                }, () => { console.log(this.state.displayValues); });                                
-                            }
-
-
-
-
-
-
+                                }, () => console.log(this.state.displayValues));
 
                             break;
                         case "+":
@@ -74,21 +60,22 @@ export default class Calculator extends Component {
                         default:
                             this.setState({
                                 displayValues: [...this.state.displayValues, event.target.value]
-                            }, () => { console.log(this.state.displayValues); });
+                            }, () => console.log(this.state.displayValues));
                             break;                             
                     }
                     break;
-                default:
-                    console.log('waiting to calculate..');
+                case "=":
+                    let array_string = this.state.displayValues.join('');
+                    let result = eval(array_string);
+                    this.setState({
+                        displayValues: result
+                    }, () => console.log(this.state.displayValues));
                     break;
 
 
-
-
-
-
-
-                
+                default:
+                    console.log('waiting to calculate..');
+                    break;                
             }
     }
     
@@ -98,7 +85,7 @@ export default class Calculator extends Component {
             <div className="calculator">
                 <div className="display" id="display">{this.state.displayValues}</div>
                 <div className="keypad">
-                    <button id="equals">=</button>
+                    <button id="equals" value="=" onClick={ this.handleOnClick }>=</button>
                     <button id="zero" value="0" onClick={ this.handleOnClick }>0</button>
                     <button id="one" value="1" onClick={ this.handleOnClick }>1</button>
                     <button id="two" value="2" onClick={ this.handleOnClick }>2</button>
