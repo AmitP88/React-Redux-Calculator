@@ -37,17 +37,38 @@ export default class Calculator extends Component {
                         displayValues: [0]
                     }, () => { console.log(this.state.displayValues); });
                     break;
+                case ".":
                 case "+":
                 case "-":
                 case "*":
                 case "/":
-                case ".":
                     switch(this.state.displayValues[this.state.displayValues.length - 1]) {
+                        case ".":
+
+
+
+
+                        
+                            if((this.state.displayValues[this.state.displayValues.length - 1] === '.')&&(typeof this.state.displayValues[this.state.displayValues.length - 2] === 'number')){
+                                console.log("too many decimals for this number!");
+                                return this.state.displayValues;
+                            } else {
+                                this.setState({
+                                    displayValues: [...this.state.displayValues, event.target.value]
+                                }, () => { console.log(this.state.displayValues); });                                
+                            }
+
+
+
+
+
+
+
+                            break;
                         case "+":
                         case "-":
                         case "*":
                         case "/":
-                        case ".":
                             console.log('duplicate operator!');
                             break;
                         default:
