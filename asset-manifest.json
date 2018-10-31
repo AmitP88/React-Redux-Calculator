@@ -1,13 +1,13 @@
 {
-  "main.css": "/React-Redux-Calculator/static/css/main.7b19af09.chunk.css",
-  "main.js": "/React-Redux-Calculator/static/js/main.0609d440.chunk.js",
-  "main.js.map": "/React-Redux-Calculator/static/js/main.0609d440.chunk.js.map",
-  "static/js/1.84a303f7.chunk.js": "/React-Redux-Calculator/static/js/1.84a303f7.chunk.js",
-  "static/js/1.84a303f7.chunk.js.map": "/React-Redux-Calculator/static/js/1.84a303f7.chunk.js.map",
-  "runtime~main.js": "/React-Redux-Calculator/static/js/runtime~main.87eab00e.js",
-  "runtime~main.js.map": "/React-Redux-Calculator/static/js/runtime~main.87eab00e.js.map",
-  "static/css/main.7b19af09.chunk.css.map": "/React-Redux-Calculator/static/css/main.7b19af09.chunk.css.map",
-  "index.html": "/React-Redux-Calculator/index.html",
-  "precache-manifest.12a56c537e79c842099a76e3fa99d056.js": "/React-Redux-Calculator/precache-manifest.12a56c537e79c842099a76e3fa99d056.js",
-  "service-worker.js": "/React-Redux-Calculator/service-worker.js"
+  "main.css": "/React-Redux-Calculator/my-app/static/css/main.7b19af09.chunk.css",
+  "main.js": "/React-Redux-Calculator/my-app/static/js/main.162b7844.chunk.js",
+  "main.js.map": "/React-Redux-Calculator/my-app/static/js/main.162b7844.chunk.js.map",
+  "static/js/1.84a303f7.chunk.js": "/React-Redux-Calculator/my-app/static/js/1.84a303f7.chunk.js",
+  "static/js/1.84a303f7.chunk.js.map": "/React-Redux-Calculator/my-app/static/js/1.84a303f7.chunk.js.map",
+  "runtime~main.js": "/React-Redux-Calculator/my-app/static/js/runtime~main.36190489.js",
+  "runtime~main.js.map": "/React-Redux-Calculator/my-app/static/js/runtime~main.36190489.js.map",
+  "static/css/main.7b19af09.chunk.css.map": "/React-Redux-Calculator/my-app/static/css/main.7b19af09.chunk.css.map",
+  "index.html": "/React-Redux-Calculator/my-app/index.html",
+  "precache-manifest.ad73d3d98d7567d6fd006bc52d6be393.js": "/React-Redux-Calculator/my-app/precache-manifest.ad73d3d98d7567d6fd006bc52d6be393.js",
+  "service-worker.js": "/React-Redux-Calculator/my-app/service-worker.js"
 }
