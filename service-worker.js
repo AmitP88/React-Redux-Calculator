@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/React-Redux-Calculator/my-app/precache-manifest.ad73d3d98d7567d6fd006bc52d6be393.js"
+  "/React-Redux-Calculator/precache-manifest.12a56c537e79c842099a76e3fa99d056.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/React-Redux-Calculator/my-app/index.html", {
+workbox.routing.registerNavigationRoute("/React-Redux-Calculator/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
